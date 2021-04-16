@@ -26,4 +26,7 @@ function generateQuote() {
 
   document.getElementById('text').innerText = randomQuote.quote;
   document.getElementById('author').innerText = randomQuote.author;
+  document.getElementById('tweet-quote').href =
+    'http://twitter.com/intent/tweet/?text=' +
+    encodeURIComponent(randomQuote.quote + ' - ' + randomQuote.author);
 }
