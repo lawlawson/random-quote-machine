@@ -1,18 +1,3 @@
-const quotes = [
-  {
-    quote: 'This is quote 1',
-    author: 'Lawrence',
-  },
-  {
-    quote: 'This is quote 2',
-    author: 'Rena',
-  },
-  {
-    quote: 'This is quote 3',
-    author: 'Other',
-  },
-];
-
 window.onload = initialLoad;
 
 function initialLoad() {
@@ -28,5 +13,7 @@ function generateQuote() {
   document.getElementById('author').innerText = randomQuote.author;
   document.getElementById('tweet-quote').href =
     'http://twitter.com/intent/tweet/?text=' +
-    encodeURIComponent(randomQuote.quote + ' - ' + randomQuote.author);
+    encodeURIComponent(randomQuote.quote) +
+    ' -' +
+    encodeURIComponent(randomQuote.author);
 }
